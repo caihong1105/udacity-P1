@@ -19,7 +19,8 @@ The goals / steps of this project are the following:
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 7 steps. 
+My pipeline consisted of 7 steps:
+
     1. Select yellow and white pieces from the original RGB image, this method is noise resistent
     white_yellow_image = select_rgb_white_yellow(img)
     
