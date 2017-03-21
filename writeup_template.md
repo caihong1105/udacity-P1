@@ -22,16 +22,22 @@ The goals / steps of this project are the following:
 My pipeline consisted of 7 steps. 
     1. Select yellow and white pieces from the original RGB image, this method is noise resistent
     white_yellow_image = select_rgb_white_yellow(img)
+    
     2. Convert to gray scale
     gray_image = grayscale(white_yellow_image)
+    
     3. Apply Gaussian Blur
     blurred_image = gaussian_blur(gray_image)
+    
     4. Use Canny edge detection
     edge_image = canny(blurred_image)
+    
     5. Crop the edges using a Region of Interest
     roi_image = roi(edge_image)
+    
     6. Use Hough transform to get the candidate lane lines
     list_of_lines = hough_lines(roi_image)
+    
     7. Extrapolate the left/right line of the current lane
     lane_image = draw_lines(img,lane_lines(img,list_of_lines))
 
